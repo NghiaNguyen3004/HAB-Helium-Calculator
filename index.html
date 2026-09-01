@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helium Calculator</title>
+</head>
+<body>
+
+  <main>
+    <h1>Helium Calculator</h1>
+
+    <form id="calculatorForm">
+      <div>
+        <label for="volumeInput">Volume (m³)</label>
+        <input type="number" id="volumeInput" name="volume" step="any" />
+      </div>
+
+      <div>
+        <label for="diameterInput">Balloon Diameter (m)</label>
+        <input type="number" id="diameterInput" name="diameter" step="any" />
+      </div>
+
+      <div>
+        <label for="gasTypeSelect">Gas Type</label>
+        <select id="gasTypeSelect" name="gasType">
+          <option value="helium">Helium</option>
+          <option value="hydrogen">Hydrogen</option>
+        </select>
+      </div>
+
+      <button type="button" id="calculateBtn">Calculate</button>
+    </form>
+
+    <section id="resultsSection">
+      <h2>Results</h2>
+      <p>Lift Capacity: <span id="result">—</span></p>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
