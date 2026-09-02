@@ -9,35 +9,58 @@
 
   <main>
     <h1>Helium Calculator</h1>
+    <div class = "Input-side">
+      <h2>Input</h2>
+      <div class = "Input-fields">
+        <label for="balloon_size">Balloon Size (grams):</label>
+        <input type="number"
+         id="balloon_size" 
+         placeholder="Balloon Size (grams)"
+         min = "0"
+         required 
+         />
 
-    <form id="calculatorForm">
-      <div>
-        <label for="volumeInput">Volume (m³)</label>
-        <input type="number" id="volumeInput" name="volume" step="any" />
+
+
+        <label for="payload-weights">Payload Weights (grams):</label>
+        <input type="number"
+         id="payload_weights" 
+         placeholder="payload weights (grams)" 
+         min = "0"
+         required 
+         />
+
+         
+        <label for="positive-lift">Positive Lift (grams):</label>
+        <input type="number" id="positive-lift" 
+        placeholder="Positive Lift (grams)" 
+        min = "0"
+        required 
+        />
+
       </div>
 
-      <div>
-        <label for="diameterInput">Balloon Diameter (m)</label>
-        <input type="number" id="diameterInput" name="diameter" step="any" />
+      <div class = "Input-buttons">
+        <button id="calculate-button">Calculate</button>
+        <button id="reset-button">Reset</button>
       </div>
 
-      <div>
-        <label for="gasTypeSelect">Gas Type</label>
-        <select id="gasTypeSelect" name="gasType">
-          <option value="helium">Helium</option>
-          <option value="hydrogen">Hydrogen</option>
-        </select>
+      <div class = "Output-side">
+        <h2>Output</h2>
+        <div class = "Output-fields">
+          <label for="required-helium-volume">Required Helium (cubic feet):</label>
+          <input type="number" id="helium-volume" placeholder="Helium Volume (liters)" readonly />
+
+          <label for="est-burst-alt">Estimated Burst Altitude (meters):</label>
+          <input type="number" id="helium-mass" placeholder="Helium Mass (grams)" readonly />
+
+          <label for="avg-ascent-rate">Average Ascent Rate (m/s):</label>
+          <input type="number" id="avg-ascent-rate" placeholder="Average Ascent Rate (m/s)" readonly />
+
+          <label for="ascent-time">Ascent Time (minutes):</label>
+          <input type="number" id="ascent-time" placeholder="Ascent Time (minutes)" readonly />
+        </div>
       </div>
-
-      <button type="button" id="calculateBtn">Calculate</button>
-    </form>
-
-    <section id="resultsSection">
-      <h2>Results</h2>
-      <p>Lift Capacity: <span id="result">—</span></p>
-    </section>
-  </main>
-
-  <script type="module" src="js/main.js"></script>
+    </div>
 </body>
 </html>
